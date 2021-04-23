@@ -1,11 +1,8 @@
-<?php 
- 
-if(isset($_GET['logout']))
-{
-    session_destroy();
-    header('location:login.php?logout=true');
-    exit;
-}
-
-echo "This is logout screen";
+<?php
+    session_start();
+    // Destroy session
+    if(session_destroy()) {
+        // Redirecting To Home Page
+        header("Location: login.php");
+    }
 ?>
