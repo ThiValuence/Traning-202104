@@ -1,27 +1,27 @@
-<?php  
-	$limit = 100;
-	$init = 2;
+<?php
+$limit = 100;
+$init = 2;
 	
-	while(TRUE)
-	{
+while(TRUE)
+{
 		$div = 2;
-		if($init > $limit) 
+	if($init > $limit)
 		{
-			break;
+		break;
 		}
-		while(TRUE)
+while(TRUE)
+	{
+	if($div > sqrt($init))
 		{
-			if($div > sqrt($init))
-			{
-				echo $init."  ";
-				break;
-			}
-			if($init % $div == 0) 
-			{
-				break;
-			}
-			$div = $div + 1;
+		echo $init."  ";
+		break;
+		}
+	if($init % $div == 0)
+		{
+		break;
+		}
+		$div = $div + 1;
 		}
 		$init = $init + 1;
-	}
+}
 ?>
